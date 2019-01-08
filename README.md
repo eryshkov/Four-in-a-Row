@@ -1,8 +1,8 @@
 #  Four in a Row
 
 <div align = "center">
-<img src="/screens/1.jpeg" width="30%">        
-<img src="/screens/2.jpeg" width="30%">       
+<img src="/screens/1.jpeg" width="40%">        
+<img src="/screens/2.jpeg" width="40%">       
 </div>
 
 <p align="center">
@@ -13,10 +13,12 @@
 <img src="https://img.shields.io/badge/licence-MIT-lightgray.svg" alt="Licence MIT"/>
 </p>
 
+[Demo video here](https://youtu.be/WsTKX9vtHLA)
 
 ## Main functionality
-* simple game Four in a Row
-* uses `GameplayKit`
+* simple game Four in a Row with AI
+* uses `GameplayKit` & `GameKit`
+* uses `GKGameModel`, `GKGameModelPlayer`, `GKGameModelUpdate`
 
 ## License
 
