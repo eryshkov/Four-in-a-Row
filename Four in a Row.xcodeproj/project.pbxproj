@@ -29,6 +29,8 @@
 		5CB3462C21E4F1410046E590 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5CB3462E21E4F22F0046E590 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		5CB3463021E51A530046E590 /* Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
+		5CB3463221E531B70046E590 /* 2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpeg; sourceTree = "<group>"; };
+		5CB3463321E531B70046E590 /* 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,8 @@
 		5CB3462D21E4F14A0046E590 /* screens */ = {
 			isa = PBXGroup;
 			children = (
+				5CB3463321E531B70046E590 /* 1.jpeg */,
+				5CB3463221E531B70046E590 /* 2.jpeg */,
 			);
 			path = screens;
 			sourceTree = "<group>";
