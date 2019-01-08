@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GameplayKit
 
 class ViewController: UIViewController {
     //MARK: -
@@ -16,9 +17,15 @@ class ViewController: UIViewController {
     var placedChips = [[UIView]]()
     var board: Board!
     
+    var strategist: GKMinmaxStrategist!
+    
     //MARK: -
     func updateUI() {
         title = "\(board.currentPlayer.name)'s Turn"
+        
+        if board.currentPlayer.chip == .black {
+            startAIMove()
+        }
     }
     
     func continueGame() {
@@ -47,6 +54,7 @@ class ViewController: UIViewController {
     
     func resetBoard() {
         board = Board()
+        strategist.gameModel = board
         updateUI()
         
         for i in 0 ..< placedChips.count {
@@ -93,6 +101,51 @@ class ViewController: UIViewController {
         }
     }
     
+    func columnForAIMove() -> Int? {
+        if let aiMove = strategist.bestMove(for: board.currentPlayer) as? Move {
+            return aiMove.column
+        }
+        
+        return nil
+    }
+    
+    func makeAIMove(in column: Int) {
+        columnButtons.forEach { (button) in
+            button.isEnabled = true
+        }
+        navigationItem.leftBarButtonItem = nil
+        
+        if let row = board.nextEmptySlot(in: column) {
+            board.add(chip: board.currentPlayer.chip, in: column)
+            addChip(inColumn: column, row: row, color: board.currentPlayer.color)
+            
+            continueGame()
+        }
+    }
+    
+    func startAIMove() {
+        columnButtons.forEach { (button) in
+            button.isEnabled = false
+        }
+        
+        let spinner = UIActivityIndicatorView(style: .gray)
+        spinner.startAnimating()
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: spinner)
+        
+        DispatchQueue.global().async {[unowned self] in
+            let strategistTime = CFAbsoluteTimeGetCurrent()
+            guard let column = self.columnForAIMove() else {return}
+            let delta = CFAbsoluteTimeGetCurrent() - strategistTime
+            let aiTimeCeiling = 1.0
+            let delay = aiTimeCeiling - delta
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + delay, execute: {
+                self.makeAIMove(in: column)
+            })
+        }
+    }
+    
     //MARK: -
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -100,6 +153,10 @@ class ViewController: UIViewController {
         for _ in 0 ..< Board.width {
             placedChips.append([UIView]())
         }
+        
+        strategist = GKMinmaxStrategist()
+        strategist.maxLookAheadDepth = 7
+        strategist.randomSource = nil
         
         resetBoard()
     }
