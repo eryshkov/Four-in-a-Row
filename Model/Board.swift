@@ -22,6 +22,14 @@ class Board: NSObject {
     var slots = [ChipColor]()
     
     //MARK: -
+    func isFull() -> Bool {
+        return false
+    }
+    
+    func isWin(for player: Player) -> Bool {
+        return false
+    }
+    
     func chip(inColumn column: Int, row: Int) -> ChipColor {
         return slots[row + column * Board.height]
     }

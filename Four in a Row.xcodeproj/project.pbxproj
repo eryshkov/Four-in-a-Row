@@ -13,6 +13,7 @@
 		5CB3461D21E49D720046E590 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CB3461C21E49D720046E590 /* Assets.xcassets */; };
 		5CB3462021E49D720046E590 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CB3461E21E49D720046E590 /* LaunchScreen.storyboard */; };
 		5CB3462B21E4A41A0046E590 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB3462A21E4A41A0046E590 /* Board.swift */; };
+		5CB3462F21E4F22F0046E590 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB3462E21E4F22F0046E590 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		5CB3462121E49D720046E590 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CB3462A21E4A41A0046E590 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		5CB3462C21E4F1410046E590 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5CB3462E21E4F22F0046E590 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				5CB3462A21E4A41A0046E590 /* Board.swift */,
+				5CB3462E21E4F22F0046E590 /* Player.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CB3462F21E4F22F0046E590 /* Player.swift in Sources */,
 				5CB3461821E49D700046E590 /* ViewController.swift in Sources */,
 				5CB3461621E49D700046E590 /* AppDelegate.swift in Sources */,
 				5CB3462B21E4A41A0046E590 /* Board.swift in Sources */,
