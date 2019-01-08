@@ -47,6 +47,7 @@ class ViewController: UIViewController {
     
     func resetBoard() {
         board = Board()
+        updateUI()
         
         for i in 0 ..< placedChips.count {
             for chip in placedChips[i] {
@@ -109,7 +110,8 @@ class ViewController: UIViewController {
         
         if let row = board.nextEmptySlot(in: column) {
             board.add(chip: .red, in: column)
-            addChip(inColumn: column, row: row, color: .red)
+            addChip(inColumn: column, row: row, color: board.currentPlayer.color)
+            continueGame()
         }
     }
     
