@@ -109,7 +109,7 @@ class ViewController: UIViewController {
         let column = sender.tag
         
         if let row = board.nextEmptySlot(in: column) {
-            board.add(chip: .red, in: column)
+            board.add(chip: board.currentPlayer.chip, in: column)
             addChip(inColumn: column, row: row, color: board.currentPlayer.color)
             continueGame()
         }
