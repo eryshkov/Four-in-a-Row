@@ -12,6 +12,7 @@
 		5CB3461B21E49D710046E590 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CB3461921E49D710046E590 /* Main.storyboard */; };
 		5CB3461D21E49D720046E590 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CB3461C21E49D720046E590 /* Assets.xcassets */; };
 		5CB3462021E49D720046E590 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CB3461E21E49D720046E590 /* LaunchScreen.storyboard */; };
+		5CB3462B21E4A41A0046E590 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB3462A21E4A41A0046E590 /* Board.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		5CB3461C21E49D720046E590 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5CB3461F21E49D720046E590 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5CB3462121E49D720046E590 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CB3462A21E4A41A0046E590 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +40,10 @@
 		5CB3460921E49D700046E590 = {
 			isa = PBXGroup;
 			children = (
-				5CB3461421E49D700046E590 /* Four in a Row */,
+				5CB3462921E4A3CD0046E590 /* Model */,
+				5CB3462821E4A3C40046E590 /* View */,
+				5CB3462721E4A3BB0046E590 /* Controller */,
+				5CB3461421E49D700046E590 /* Other */,
 				5CB3461321E49D700046E590 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,17 +56,39 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5CB3461421E49D700046E590 /* Four in a Row */ = {
+		5CB3461421E49D700046E590 /* Other */ = {
 			isa = PBXGroup;
 			children = (
 				5CB3461521E49D700046E590 /* AppDelegate.swift */,
-				5CB3461721E49D700046E590 /* ViewController.swift */,
-				5CB3461921E49D710046E590 /* Main.storyboard */,
 				5CB3461C21E49D720046E590 /* Assets.xcassets */,
-				5CB3461E21E49D720046E590 /* LaunchScreen.storyboard */,
 				5CB3462121E49D720046E590 /* Info.plist */,
 			);
-			path = "Four in a Row";
+			path = Other;
+			sourceTree = "<group>";
+		};
+		5CB3462721E4A3BB0046E590 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5CB3461721E49D700046E590 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5CB3462821E4A3C40046E590 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5CB3461921E49D710046E590 /* Main.storyboard */,
+				5CB3461E21E49D720046E590 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5CB3462921E4A3CD0046E590 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5CB3462A21E4A41A0046E590 /* Board.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +164,7 @@
 			files = (
 				5CB3461821E49D700046E590 /* ViewController.swift in Sources */,
 				5CB3461621E49D700046E590 /* AppDelegate.swift in Sources */,
+				5CB3462B21E4A41A0046E590 /* Board.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +312,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = Z256VMH9HM;
-				INFOPLIST_FILE = "Four in a Row/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Other/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -304,7 +332,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = Z256VMH9HM;
-				INFOPLIST_FILE = "Four in a Row/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Other/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
