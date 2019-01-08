@@ -77,6 +77,12 @@ class ViewController: UIViewController {
 
     //MARK: -
     @IBAction func makeMove(_ sender: UIButton) {
+        let column = sender.tag
+        
+        if let row = board.nextEmptySlot(in: column) {
+            board.add(chip: .red, in: column)
+            addChip(inColumn: column, row: row, color: .red)
+        }
     }
     
 }
