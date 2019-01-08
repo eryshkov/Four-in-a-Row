@@ -87,7 +87,7 @@ class Board: NSObject {
         
         if row + (moveY * 3) >= Board.height {return false}
         if col + (moveX * 3) < 0 {return false}
-        if row + (moveX * 3) >= Board.width {return false}
+        if col + (moveX * 3) >= Board.width {return false}
         
         // still here? Check every square
         if chip(inColumn: col, row: row) != initialChip {return false}
